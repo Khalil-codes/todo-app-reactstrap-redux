@@ -1,9 +1,6 @@
 import React from 'react';
 import { Input } from 'reactstrap';
-// import { useDispatch } from 'react-redux';
-// import { todoFilter } from '../store/todoSlice';
 const TodoFilter = (props) => {
-    //     const dispatch = useDispatch();
     return (
         <Input
             onChange={(e) => {

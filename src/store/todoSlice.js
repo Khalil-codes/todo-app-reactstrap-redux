@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [
+    // Few Initial data
     { id: 't01', title: 'Learn React', completed: false },
     { id: 't02', title: 'Learn Redux', completed: true },
     { id: 't03', title: 'Learn React Native', completed: false },
@@ -28,24 +29,6 @@ const todoSlice = createSlice({
         deleteTodo: (state, action) => {
             return state.filter((todo) => todo.id !== action.payload.id);
         },
-        // todoFilter: (state, action) => {
-        //     console.log(action.payload.filter);
-        //     switch (action.payload.filter) {
-        //         case 'completed':
-        //             state.filteredTodos = state.todos.filter(
-        //                 (todo) => todo.completed === true
-        //             );
-        //             break;
-        //         case 'incomplete':
-        //             state.filteredTodos = state.todos.filter(
-        //                 (todo) => todo.completed === false
-        //             );
-        //             break;
-        //         default:
-        //             state.filteredTodos = state.todos;
-        //             break;
-        //     }
-        // },
     },
 });
 

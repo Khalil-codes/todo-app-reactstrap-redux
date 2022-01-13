@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroupItem, Button } from 'reactstrap';
+import { ListGroupItem } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { toggleCompleteTodo, deleteTodo } from '../store/todoSlice';
 function Todo({ todo }) {
@@ -24,12 +24,12 @@ function Todo({ todo }) {
             }`}>
             <div onClick={completeTodoHandler}>{todo.title}</div>
             <div>
-                <a
+                <button
                     className="btn-trash"
                     active={false}
                     onClick={deleteTodoHandler}>
                     <i className="fas fa-trash"></i>
-                </a>
+                </button>
             </div>
         </ListGroupItem>
     );
